@@ -1,0 +1,10 @@
+version: '14'
+services:
+  pg_f:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=currency
+    ports:
+      - "5435:5432"

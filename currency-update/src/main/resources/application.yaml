@@ -1,0 +1,16 @@
+server:
+  port: 8086
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:postgresql://localhost:5435/currency?stringtype=unspecified
+    username: root
+    password: root
+
+binance:
+  multiply: 100000000
+  api:
+    key: E6lAL4UM9JgEInLogyAvaGfgbXklcF3xGCNkW4FwBx1pIkPJnJsbtr1Dm4HkDlGB
+    secret: RtJpEZsuOFX1NVp242d5fhcIwU5ULSjvC7MiUzv0dnu20oNylkTk0TRYKWfmMOcl
