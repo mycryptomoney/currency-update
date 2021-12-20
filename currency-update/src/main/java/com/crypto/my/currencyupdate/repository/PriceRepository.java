@@ -13,4 +13,6 @@ public interface PriceRepository extends JpaRepository<Price, Long> {
     List<Price> findAllByTimeLessThan(LocalDateTime time);
 
     Optional<Price> findFirstByCodeOrderByTimeDesc(Code code);
+
+    Optional<Price> findFirstByCodeNameOrderByTimeDesc(String name);
 }

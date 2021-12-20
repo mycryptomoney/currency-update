@@ -27,7 +27,7 @@ public class BinanceFetcherJob {
     private final BinanceApiRestClient binanceApiRestClient;
     private final SettingsProvider settingsProvider;
 
-    @Scheduled(fixedRate = 15000)
+    @Scheduled(fixedRate = 1000)
     private void call() {
         List<TickerPrice> tickerPrices = binanceApiRestClient.getAllPrices();
         BigDecimal multiply = settingsProvider.getMultiply();

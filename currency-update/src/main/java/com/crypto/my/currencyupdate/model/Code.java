@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(uniqueConstraints = {@UniqueConstraint(name = "name_unique", columnNames = "name")})
+@Table(name = "code", uniqueConstraints = {@UniqueConstraint(name = "name_unique", columnNames = "name")})
 public class Code {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

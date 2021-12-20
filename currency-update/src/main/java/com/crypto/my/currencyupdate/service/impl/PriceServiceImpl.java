@@ -5,17 +5,24 @@ import com.crypto.my.currencyupdate.model.Price;
 import com.crypto.my.currencyupdate.repository.PriceRepository;
 import com.crypto.my.currencyupdate.service.PriceService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class PriceServiceImpl implements PriceService {
+
     private final PriceRepository priceRepository;
+
+    @Override
+    public Optional<Price> getLastPrice(String name) {
+        return priceRepository.findFirstByCodeNameOrderByTimeDesc(name);
+    }
 
     @Override
     public Price getLastPrice(Code code) {

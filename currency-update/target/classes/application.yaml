@@ -3,9 +3,9 @@ server:
 spring:
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
   datasource:
-    url: jdbc:postgresql://localhost:5435/currency?stringtype=unspecified
+    url: jdbc:postgresql://localhost:5431/crypto?stringtype=unspecified
     username: root
     password: root
 
