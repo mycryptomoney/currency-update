@@ -3,11 +3,11 @@ package com.crypto.my.currencyupdate.service.impl;
 import com.crypto.my.currencyupdate.model.Code;
 import com.crypto.my.currencyupdate.repository.CodeRepository;
 import com.crypto.my.currencyupdate.service.CodeService;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class CodeServiceImpl implements CodeService {
 
     private final CodeRepository codeRepository;
